@@ -10,6 +10,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/styles/app.css" />
+    <script src="assets/scripts/vendor.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script> 
+    <!-- JS should import like this, with defer, it get loaded early but executed only once parsing HTML finish -->
+    <!-- sometimes JS not rely on HTML, so dont need defer but use async -->
+    <!-- async will make that JS file execute right away once downloaded but not block HTML to be parse(not wait for HTML to parse completely) -->
   </head>
   <body>
     <header>
@@ -29,7 +34,5 @@
       <h2 id="current-calculation">0</h2>
       <h2>Result: <span id="current-result">0</span></h2>
     </section>
-    <script src="assets/scripts/vendor.js"></script>
-    <script src="assets/scripts/app.js"></script>
   </body>
 </html>
